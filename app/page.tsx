@@ -1,9 +1,10 @@
 export default function Home() {
     return (
         <div className="h-screen">
+            {/* Top section */}
             <div className="h-4/9 rounded-b-[24px] shadow bg-gradient-to-b from-indigo-600 to-indigo-700">
                 <div className="flex flex-col items-center justify-center h-full">
-                    <p className="font-semibold text-xl text-gray-50/60 py-8">
+                    <p className="font-semibold text-lg text-gray-50/60 py-8">
                         Your&nbsp;Result
                     </p>
 
@@ -19,15 +20,18 @@ export default function Home() {
                         </span>
                     </div>
 
-                    <p className="font-semibold text-2xl text-white pb-4">
+                    <p className="font-semibold text-2xl text-white pb-2">
                         Great
                     </p>
 
-                    <p className="px-10 text-center font-semibold text-lg text-gray-400 pb-10">
+                    <p className="px-14 text-center font-semibold text-gray-300/70 pb-10">
                         You scored higher than 65% of the people who have taken these tests.
                     </p>
                 </div>
             </div>
+
+            {/* Bottom section */}
+            {/* TODO */}
         </div>
     );
 }
