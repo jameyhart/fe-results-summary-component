@@ -5,7 +5,7 @@ import { FiEye } from 'react-icons/fi';
 
 export default function Home() {
     return (
-        <div className="h-screen space-x-12 space-y-8">
+        <div className="h-screen space-x-10 space-y-8 custom-blur"> {/* Now beginning to wonder if the blur wasn't intentional and was just poor quality design images? */}
             {/* Top section */}
             <div className="h-4/9 rounded-b-[24px] shadow bg-gradient-to-b from-indigo-600 to-indigo-700">
                 <div className="flex flex-col items-center justify-center h-full">
@@ -43,14 +43,14 @@ export default function Home() {
                     </div>
 
                     {/* Breakdown */}
-                    <div className="flex flex-col justify-center space-y-4 font-medium custom-blur">
+                    <div className="flex flex-col justify-center space-y-4 font-medium">
                         {/* Reaction */}
-                        <span className="flex px-5 py-4 bg-red-50 rounded-lg text-red-500 w-full items-center">
+                        <span className="flex px-5 py-4 bg-red-50 rounded-lg text-red-400 w-full items-center">
                             <BsLightningCharge
                                 className="text-lg mr-3"
                                 style={{ transform: 'rotate(-15deg) scaleX(1.1) scaleY(0.9)' }} // Couldn't achieve this with Tailwind classes?
                             />
-                            <p>
+                            <p className='pt-1'>
                                 Reaction
                             </p>
                         </span>
@@ -58,7 +58,7 @@ export default function Home() {
                         {/* Memory */}
                         <span className="flex px-4 py-4 bg-yellow-50 rounded-lg text-yellow-500 w-full items-center">
                             <LiaBrainSolid className="text-2xl mr-3" />
-                            <p>
+                            <p className='pt-1'>
                                 Memory
                             </p>
                         </span>
@@ -69,7 +69,7 @@ export default function Home() {
                                 <IoChatbubbleOutline className="text-2xl mr-3" />
                                 <span className="absolute top-1/2 left-1/2 transform -translate-x-[9px] -translate-y-1/2 bg-green-500 h-0.5 w-1.5" />
                             </div>
-                            <p>
+                            <p className='pt-1'>
                                 Verbal
                             </p>
                         </span>
@@ -80,7 +80,7 @@ export default function Home() {
                                 className="text-lg mr-3"
                                 style={{ transform: 'scaleX(1.1)' }} // Couldn't achieve this with Tailwind classes?
                             />
-                            <p>
+                            <p className='pt-1'>
                                 Visual
                             </p>
                         </span>
