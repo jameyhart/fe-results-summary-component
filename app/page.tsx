@@ -1,3 +1,8 @@
+import { BsLightningCharge } from 'react-icons/bs';
+import { LiaBrainSolid } from 'react-icons/lia';
+import { IoChatbubbleOutline } from 'react-icons/io5';
+import { FiEye } from 'react-icons/fi';
+
 export default function Home() {
     return (
         <div className="h-screen space-x-12 space-y-8">
@@ -24,39 +29,60 @@ export default function Home() {
                         Great
                     </p>
 
-                    <p className="px-16 text-center text-gray-300/70 pb-10 text-xl">
+                    <p className="px-16 text-center text-gray-300/70 pb-10 text-lg">
                         You scored higher than 65% of the people who have taken these tests.
                     </p>
                 </div>
             </div>
 
             {/* Bottom section */}
-            <div className="flex justify-center pr-12">
+            <div className="flex justify-center pr-12 pb-12">
                 <div className="w-full">
                     <div className="h-5/9 text-xl font-semibold mb-8 text-gray-600">
                         Summary
                     </div>
 
                     {/* Breakdown */}
-                    <div className="flex flex-col justify-center space-y-4 font-medium">
+                    <div className="flex flex-col justify-center space-y-4 font-medium custom-blur">
                         {/* Reaction */}
-                        <span className="px-6 py-4 bg-red-50 rounded-lg text-red-500 w-full text-blur">
-                            Reaction
+                        <span className="flex px-5 py-4 bg-red-50 rounded-lg text-red-500 w-full items-center">
+                            <BsLightningCharge
+                                className="text-lg mr-3"
+                                style={{ transform: 'rotate(-15deg) scaleX(1.1) scaleY(0.9)' }} // Couldn't achieve this with Tailwind classes?
+                            />
+                            <p>
+                                Reaction
+                            </p>
                         </span>
 
                         {/* Memory */}
-                        <span className="px-6 py-4 bg-yellow-50 rounded-lg text-yellow-500 w-full">
-                            Memory
+                        <span className="flex px-4 py-4 bg-yellow-50 rounded-lg text-yellow-500 w-full items-center">
+                            <LiaBrainSolid className="text-2xl mr-3" />
+                            <p>
+                                Memory
+                            </p>
                         </span>
 
                         {/* Verbal */}
-                        <span className="px-6 py-4 bg-green-50 rounded-lg text-green-500 w-full">
-                            Verbal
+                        <span className="flex px-4 py-4 bg-green-50 rounded-lg text-green-500 w-full items-center">
+                            <div className="relative">
+                                <IoChatbubbleOutline className="text-2xl mr-3" />
+                                <span className="absolute top-1/2 left-1/2 transform -translate-x-[9px] -translate-y-1/2 bg-green-500 h-0.5 w-1.5" />
+                            </div>
+                            <p>
+                                Verbal
+                            </p>
                         </span>
 
                         {/* Visual */}
-                        <span className="px-6 py-4 bg-blue-50 rounded-lg text-blue-500 w-full">
-                            Visual
+                        <span className="flex px-5 py-4 bg-indigo-50 rounded-lg text-blue-800 w-full items-center">
+                            <FiEye
+                                className="text-lg mr-3"
+                                style={{ transform: 'scaleX(1.1)' }} // Couldn't achieve this with Tailwind classes?
+                            />
+                            <p>
+                                Visual
+                            </p>
                         </span>
                     </div>
                 </div>

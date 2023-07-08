@@ -10,3 +10,7 @@
 .hanken-grotesk {
     font-family: 'Hanken Grotesk', sans-serif;
 }
+
+.custom-blur {
+    filter: blur(0.6px);
+}
