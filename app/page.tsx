@@ -1,6 +1,6 @@
 export default function Home() {
     return (
-        <div className="h-screen space-x-8 space-y-6">
+        <div className="h-screen space-x-12 space-y-8">
             {/* Top section */}
             <div className="h-4/9 rounded-b-[24px] shadow bg-gradient-to-b from-indigo-600 to-indigo-700">
                 <div className="flex flex-col items-center justify-center h-full">
@@ -24,15 +24,42 @@ export default function Home() {
                         Great
                     </p>
 
-                    <p className="px-14 text-center font-semibold text-gray-300/70 pb-10">
+                    <p className="px-16 text-center text-gray-300/70 pb-10 text-xl">
                         You scored higher than 65% of the people who have taken these tests.
                     </p>
                 </div>
             </div>
 
             {/* Bottom section */}
-            <div className="h-5/9 text-lg font-semibold">
-                Summary
+            <div className="flex justify-center pr-12">
+                <div className="w-full">
+                    <div className="h-5/9 text-xl font-semibold mb-8 text-gray-600">
+                        Summary
+                    </div>
+
+                    {/* Breakdown */}
+                    <div className="flex flex-col justify-center space-y-4 font-medium">
+                        {/* Reaction */}
+                        <span className="px-6 py-4 bg-red-50 rounded-lg text-red-500 w-full text-blur">
+                            Reaction
+                        </span>
+
+                        {/* Memory */}
+                        <span className="px-6 py-4 bg-yellow-50 rounded-lg text-yellow-500 w-full">
+                            Memory
+                        </span>
+
+                        {/* Verbal */}
+                        <span className="px-6 py-4 bg-green-50 rounded-lg text-green-500 w-full">
+                            Verbal
+                        </span>
+
+                        {/* Visual */}
+                        <span className="px-6 py-4 bg-blue-50 rounded-lg text-blue-500 w-full">
+                            Visual
+                        </span>
+                    </div>
+                </div>
             </div>
         </div>
     );
