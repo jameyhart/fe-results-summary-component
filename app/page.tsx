@@ -159,6 +159,15 @@ export default function Home() {
                             </span>
                         </span>
                     </div>
+
+                    {/* Continue button */}
+                    <div className='mt-6'>
+                        <span className='flex bg-slate-800/95 text-white rounded-full p-4 justify-center'>
+                            <p className='text-xl tracking-wide pt-1'>
+                                Continue
+                            </p>
+                        </span>
+                    </div>
                 </div>
             </div>
         </div>
